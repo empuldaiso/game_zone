@@ -1,0 +1,35 @@
+/* Shared UI foundations used across the Five Nil pages. */
+:root {
+    color-scheme: dark;
+    --ui-focus: #8cff66;
+    --ui-border: rgba(255, 255, 255, 0.1);
+}
+
+::selection {
+    color: #090b10;
+    background: var(--ui-focus);
+}
+
+:focus-visible {
+    outline: 3px solid var(--ui-focus);
+    outline-offset: 4px;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+img,
+svg,
+iframe {
+    max-width: 100%;
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: min(100% - 28px, 1120px);
+    }
+}

@@ -1,0 +1,55 @@
+/* Shared hover, focus, and motion behavior. */
+a,
+button,
+[role="button"] {
+    -webkit-tap-highlight-color: transparent;
+    transition: color 180ms ease, background-color 180ms ease,
+        border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+a:active,
+button:active,
+[role="button"]:active {
+    transform: translateY(1px);
+}
+
+.button:hover,
+.map-link:hover {
+    box-shadow: 0 8px 24px rgba(140, 255, 102, 0.12);
+}
+
+.game-card,
+.feature-card,
+.update-grid article,
+.contact-grid article,
+.story article,
+.games article,
+.event-list article {
+    transition: transform 200ms ease, border-color 200ms ease,
+        box-shadow 200ms ease;
+}
+
+.game-card:hover,
+.feature-card:hover,
+.update-grid article:hover,
+.contact-grid article:hover,
+.story article:hover,
+.games article:hover,
+.event-list article:hover {
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
